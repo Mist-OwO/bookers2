@@ -1,5 +1,9 @@
 class BooksController < ApplicationController
   def index
+    @user = User(params[:id])
+  end
+  
+  def create
   end
 
   def show
