@@ -56,9 +56,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
-gem 'net-smtp'
-
 gem 'kaminari','~> 1.2.1'
 
 gem 'refile', require: 'refile/rails', github: 'refile/refile', branch: 'master'
 gem 'refile-mini_magick'
+
+gem 'net-smtp'
