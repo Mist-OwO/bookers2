@@ -27,10 +27,6 @@ Userモデルのテスト
     Bookモデルとの関係
 [32m      1:Nとなっている[0m
 
-Articles
-  GET /articles
-[31m    works! (now write some real specs) (FAILED - 1)[0m
-
 [STEP1] ユーザログイン前のテスト
   トップ画面のテスト
     表示内容の確認
@@ -287,19 +283,6 @@ Articles
 [32m      投稿一覧画面でレンチアイコンが表示される[0m
 [32m      投稿詳細画面でレンチアイコンが表示される[0m
 
-Failures:
-
-  1) Articles GET /articles works! (now write some real specs)
-     [31mFailure/Error: get articles_path[0m
-     [31m[0m
-     [31mNameError:[0m
-     [31m  undefined local variable or method `articles_path' for #<RSpec::ExampleGroups::Articles::GETArticles "works! (now write some real specs)" (./spec/requests/articles_spec.rb:5)>[0m
-     [36m# ./spec/requests/articles_spec.rb:6:in `block (3 levels) in <main>'[0m
-
-Finished in 1 minute 4.21 seconds (files took 2.58 seconds to load)
-[31m200 examples, 1 failure[0m
-
-Failed examples:
-
-[31mrspec ./spec/requests/articles_spec.rb:5[0m [36m# Articles GET /articles works! (now write some real specs)[0m
+Finished in 49.14 seconds (files took 2.07 seconds to load)
+[32m199 examples, 0 failures[0m
 

@@ -257,9 +257,15 @@ describe '[STEP3] 仕上げのテスト' do
       end
     end
 
+    # === ユーザーが本の投稿者ではない場合、編集画面に遷移しようとしても投稿一覧画面へリダイレクトする ===
+    # BooksController > editのロジックが破綻していないかの妥当性を兼ねる
+    # ====================================================================================================
     context '他人の投稿編集画面' do
+      let!(:another_user) { create(:user) }
       it '遷移できず、投稿一覧画面にリダイレクトされる' do
-        visit edit_book_path(other_book)
+        second_user_book = FactoryBot.create(:book, user: user) # 「user」の投稿をもう一つ作成
+        sign_in another_user
+        visit edit_book_path(second_user_book)
         expect(current_path).to eq '/books'
       end
     end
